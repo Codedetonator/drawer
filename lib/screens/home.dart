@@ -40,6 +40,25 @@ class _HomePage extends State<HomePage> {
                 ),
                 ListTile(
                     title: Text("Home"),
+                    leading: Icon(Icons.home),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => OtherPage("Other"),
+                      ));
+                    }),
+                     ListTile(
+                    title: Text("import"),
+                    leading: Icon(Icons.import_export_rounded),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => OtherPage("Other"),
+                      ));
+                    }),
+                     ListTile(
+                    title: Text("Gallery"),
+                    leading: Icon(Icons.image),
                     onTap: () {
                       Navigator.of(context).pop();
                       Navigator.of(context).push(MaterialPageRoute(
@@ -47,7 +66,8 @@ class _HomePage extends State<HomePage> {
                       ));
                     }),
                 ListTile(
-                    title: Text("About"),
+                    title: Text("Slideshow"),
+                    leading: Icon(Icons.slideshow),
                     onTap: () {
                       Navigator.of(context).pop();
                       Navigator.of(context).push(MaterialPageRoute(
@@ -55,7 +75,8 @@ class _HomePage extends State<HomePage> {
                       ));
                     }),
                 ListTile(
-                    title: const Text("Setting"),
+                    title: const Text("tools"),
+                    leading: Icon(Icons.settings),
                     onTap: () {
                       Navigator.of(context).pop();
                       Navigator.of(context).push(MaterialPageRoute(
@@ -64,11 +85,20 @@ class _HomePage extends State<HomePage> {
                       ));
                     }),
                 const Divider(
-                  thickness: 10.0,
+                  thickness: 3,
                 ),
+                 ListTile(
+                    title: Text("share"),
+                    leading: Icon(Icons.share),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => OtherPage("Other"),
+                      ));
+                    }),
                 ListTile(
-                  title: Text("Close"),
-                  leading: Icon(Icons.cancel),
+                  title: Text("Send"),
+                  leading: Icon(Icons.send),
                   onTap: () => Navigator.of(context).pop(),
                 ),
               ],
